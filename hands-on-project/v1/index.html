@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- WebSocket Notifications -->
+<div id="notification-container"></div>
+        <!-- Loading Screen -->
+        <div id="loading-screen" class="loading">
+            <h2>Loading...</h2>
+        </div>
+
+        <!-- Login/Register Form -->
+        <div id="auth-section" class="hidden">
+            <h2 id="auth-title">Login</h2>
+            <form id="auth-form">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Submit</button>
+            </form>
+            <button id="toggle-auth">Don't have an account? Register</button>
+        </div>
+
+        <!-- Chat Interface -->
+        <div id="chat-section" class="hidden">
+            <button id="logout-btn">Logout</button>
+            <button id="user-settings-btn">Update</button>
+            <div id="chat-messages"></div>
+            <form id="message-form">
+                <input type="text" id="message-input" placeholder="Type a message..." required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+
+        <!-- User Settings Section -->
+        <div id="user-settings" class="hidden">
+            <h2>User Settings</h2>
+            <form id="password-update-form">
+                <input type="password" id="new-password" placeholder="New Password" required>
+                <button type="submit">Update Password</button>
+            </form>
+            <button id="delete-user-btn">Delete Account</button>
+            <button id="back-to-chat">Back to Chat</button>
+        </div>
+    </div>
+    <script src="websocket.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

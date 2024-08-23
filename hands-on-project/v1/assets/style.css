@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #000000;
+}
+
+#app {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: #fff;
+}
+
+.hidden {
+    display: none;
+}
+
+.loading {
+    text-align: center;
+}
+
+#chat-messages {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.message {
+    padding: 5px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    max-width: 75%;
+}
+
+.message-left {
+    background-color: #f1f1f1;
+    text-align: left;
+}
+
+.message-right {
+    background-color: #007bff;
+    color: white;
+    text-align: right;
+    margin-left: auto;
+}
+
+#message-form {
+    display: flex;
+}
+
+#message-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#message-form button {
+    padding: 10px;
+    margin-left: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#message-form button:hover {
+    background-color: #0056b3;
+}
+
+
+/* WebSocket Notifications */
+#notification-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 300px;
+    z-index: 1000;
+}
+
+.notification {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notification button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.notification button:hover {
+    color: #ddd;
+}
+
+/* Chat messages alignment fix */
+.message-right {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+}
